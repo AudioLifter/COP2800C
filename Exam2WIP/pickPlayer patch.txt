@@ -1,0 +1,39 @@
+	public static int pickPlayer(ArrayList<Player> p){
+		Scanner scan = new Scanner(System.in);
+		int choice;
+		boolean badPlayer = true;
+		
+		do {
+			badPlayer = false;
+			
+			for(int i = 0; i < p.size(); i++) { //printing player names
+				System.out.println( "["+ (i+1) + "] " + p.get(i).getPlayerName().toString());
+			} //end for
+			
+			
+			do { //validate outofbounds player
+				choice = Methods.getInt("Please select a player: ") - 1; //getting player selection from player
+				if(choice < 0) {
+					System.out.println("Player doen't exist, try again!");
+				}//end if
+			}while(choice < 0); //forces player to enter a valid player
+			
+			
+			if(choice < p.size()) { 
+				if(p.get(choice).getMoneyBalance() <= 1) {
+					badPlayer = true;
+					System.out.println("Insufficient funds, please select another player!");
+				}//end inner if
+				
+			}//end outer if
+			
+			else {
+				badPlayer = true;
+				System.out.println("That player doesn't exist, please try again!");
+			}//end else
+			
+		}while(badPlayer);
+		
+		
+		return choice;
+	} // end pickPlayer

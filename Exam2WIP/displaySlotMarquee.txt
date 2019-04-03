@@ -1,0 +1,19 @@
+	public static void printSlotMarquee(ArrayList<SlotMachine> slotArray, int s) {
+		int mLen;
+		int i;
+		String marquee;
+		mLen = slotArray.get(s).getSlotName().length(); //gets length of slot machines name string
+		for(i = 0; i < (mLen + 10); i++)
+				System.out.print("=");
+		System.out.print("\n");
+		marquee = "===  " + slotArray.get(s).getSlotName() + "  ===";
+		System.out.println(marquee);
+		for(i = 0; i < (mLen + 10); i++)
+			System.out.print("=");
+		
+	}//end printSlotMarquee
+
+
+*****************************ADD TO playSlot method*********************************
+
+		displaySlotMarquee(slotArray, s);

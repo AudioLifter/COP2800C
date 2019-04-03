@@ -1,0 +1,24 @@
+
+Player 1
+
+Name: Charlie C Hunchuck
+ 
+ 
+DOB: 3/23/1960
+ 
+ 
+Balance: $5000
+
+
+
+Player 2
+
+Name: Jonathan   De la cruz
+ 
+ 
+DOB: 6/20/1996
+ 
+ 
+Balance: $2000
+
+
